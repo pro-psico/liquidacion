@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIQUIDACIÓN DE ACREENCIAS LABORALES</title>
+    <link rel="stylesheet" href="./static/css/first.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./static/img/uniandes.svg" alt="Logo Universidad de los Andes">
+        </div>
+    </header>
+
+    <main>
+        <h1>LIQUIDACIÓN DE ACREENCIAS LABORALES</h1>
+        <form id="formulario">
+            <label for="fecha_corte" class="fecha_corte">Fecha de corte:</label>
+            <input type="date" id="fecha_corte" name="fecha_corte">
+
+            <div class="datos_generales">
+                <h2>DATOS GENERALES</h2>
+                <label for="nombre">Nombre del/de la trabajador/a:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre emplead@">
+
+                <label for="enterprise">Nombre de empresa:</label>
+                <input type="text" id="enterprise" name="enterprise" placeholder="Nombre empresa">
+
+                <label for="laboral">Tipo de Relación Laboral:</label>
+                <input type="text" id="laboral" name="laboral" placeholder="Relacion laboral">
+
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" name="cargo" placeholder="Cargo ocupado">
+
+                <div class="contain_jor">
+                    <h2>Jornada</h2>
+                    
+                    <div>
+                        <label for="dias">Dias:</label>
+                        <input type="text" id="dias" name="dias" placeholder="Especificar dias">
+                    </div>
+    
+                    <div>
+                        <label for="horas">Horas:</label>
+                        <input type="text" id="horas" name="horas" placeholder="Horas por jornada">
+                    </div>
+    
+                    <div>
+                        <label for="descanso">Almuerzo o descanso en cada día de trabajo:</label>
+                        <input type="text" id="descanso" name="descanso" placeholder="Descanso">
+                    </div>
+                </div>
+                <label for="motivo">Motivo de terminación:</label>
+                <input type="text" id="motivo" name="motivo" placeholder="Especificar motivo">
+    
+                <label for="inicio">Fecha de inicio::</label>
+                <input type="date" id="inicio" name="inicio">
+    
+                <label for="fin">Fecha terminación:</label>
+                <input type="date" id="fin" name="fin">
+                
+                <label for="">Tiempo total trabajado: </label>
+                <p id="tiempo_total" class="resp_p tiempo_p"></p>
+
+            </div>
+
+            <div>
+                <h2>DÍAS</h2>
+                <div class="dias_count">
+                    <h3>Días:</h3>
+                    
+                    <div class="dias_contenedor">
+                        <input type="text" placeholder="Año (xxxx)">
+                        <input type="number" id="dias_lab1" placeholder="N° Dias laborados">
+                        <input type="text" placeholder="Relacion laboral">
+                    </div>
+
+                    <div class="dias_contenedor">
+                        <input type="text" placeholder="Año (xxxx)">
+                        <input type="number" id="dias_lab2" placeholder="N° Dias laborados">
+                        <input type="text" placeholder="Relacion laboral">
+                    </div>
+
+                    <div class="dias_contenedor">
+                        <input type="text" placeholder="Año (xxxx)">
+                        <input type="number" id="dias_lab3" placeholder="N° Dias laborados">
+                        <input type="text" placeholder="Relacion laboral">
+                    </div>                
+                </div>
+            </div>
+            
+            <div class="factores">
+                <h2>FACTORES QUE COMPONEN EL SALARIO (ART. 127 CST)</h2>
+                <div>
+                    <div class="factores_uno">
+                        <label>Salario básico (contractual, legal o convencional)</label>
+                        <input type="number" id="sal_basico1" placeholder="Valor en pesos">
+                        <input type="number" id="sal_basico2" placeholder="Valor en pesos">
+                        <input type="number" id="sal_basico3" placeholder="Valor en pesos">
+                    </div>
+
+                    <div class="factores_uno">
+                        <label for="">Trabajo suplementario y recargos nocturnos no dominicales (TS)</label>
+                        <input type="number" id="tra_sup1" placeholder="Valor en pesos">
+                        <input type="number" id="tra_sup2" placeholder="Valor en pesos">
+                        <input type="number" id="tra_sup3" placeholder="Valor en pesos">
+                    </div>
+
+                    <div class="factores_uno">
+                        <label for="">Trabajo suplementario y recargos dominicales (nocturnos, horas extra) (D)</label>
+                        <input type="number" id="tra_sup_dom1" placeholder="Valor en pesos">
+                        <input type="number" id="tra_sup_dom2" placeholder="Valor en pesos">
+                        <input type="number" id="tra_sup_dom3" placeholder="Valor en pesos">
+                    </div>
+                    
+                    <div class="factores_uno">
+                        <label for="">Auxilio de transporte</label>
+                        <input type="number" id="aux_trans1" placeholder="Valor en pesos">
+                        <input type="number" id="aux_trans2" placeholder="Valor en pesos">
+                        <input type="number" id="aux_trans3" placeholder="Valor en pesos">
+                    </div>
+
+                    <div class="factores_uno">
+                        <label for="">Comisiones, porcentajes ventas, viáticos, otros (CPVVO)</label>
+                        <input type="number" id="comi1" placeholder="Valor en pesos">
+                        <input type="number" id="comi2" placeholder="Valor en pesos">
+                        <input type="number" id="comi3" placeholder="Valor en pesos">
+                    </div>
+
+                    <div class="factores_uno respu_fact fact_total">
+                        <label for="">Total Salario Base de Liquidación (SBL)</label>
+                        <p id="res_1" class="resp_p"></p>
+                        <p id="res_2" class="resp_p"></p>
+                        <p id="res_3" class="resp_p"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="adeudado">
+                <h2>SUMAS ADEUDADAS AL TRABAJADOR POR CONCEPTO DE SALARIO, TRABAJO SUPLEMENTARIO O CON RECARGOS O AUXILIO DE TRANSPORTE</h2>
+                <div>
+                    <div class="factores_uno">
+                        <label>Salarios debidos y/o diferencia salarial</label>
+                        <input type="number" id="sal_debe1" placeholder="Valor en pesos">
+                        <input type="number" id="sal_debe2" placeholder="Valor en pesos">
+                        <input type="number" id="sal_debe3" placeholder="Valor en pesos">
+                    </div>
+
+                    <div class="factores_uno respu_fact">
+                        <label for="">(TS) + (DF) + (CPVVO) debidos</label>
+                        <p id="ts_df1" class="resp_p"></p>
+                        <p id="ts_df2" class="resp_p"></p>
+                        <p id="ts_df3" class="resp_p"></p>
+                    </div>
+
+                    <div class="factores_uno respu_fact">
+                        <label for="">Auxilio de transporte debido</label>
+                        <p id="aux_deb1" class="resp_p"></p>
+                        <p id="aux_deb2" class="resp_p"></p>
+                        <p id="aux_deb3" class="resp_p"></p>
+                    </div>
+                    <div class="factores_uno respu_fact fact_total">
+                        <label for="">Total:</label>
+                        <p id="res_ad1" class="resp_p"></p>
+                        <p id="res_ad2" class="resp_p"></p>
+                        <p id="res_ad3" class="resp_p"></p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div>
+                <h2>ACREENCIAS LABORALES</h2>
+                <div class="acreencias respu_fact">
+                    <p>Auxilio de Cesantías (Artículo 249  del Código Sustantivo del Trabajo-CST)</p>
+                    <p>SBL x No días periodo,año/360</p>
+                    <p id="aux_cesa1" class="resp_p"></p>
+                    <p id="aux_cesa2" class="resp_p"></p>
+                    <p id="aux_cesa3" class="resp_p"></p>
+                </div>
+
+                <div class="acreencias respu_fact">
+                    <p>Intereses sobre las Cesantías  (Artículo 1 Ley 52 de 1975)</p>
+                    <p>v/r cesantía (por cada periodo) x N° días periodo, año x 0.12 /360</p>
+                    <p id="int_cesa1" class="resp_p"></p>
+                    <p id="int_cesa2" class="resp_p"></p>
+                    <p id="int_cesa3" class="resp_p"></p>
+                </div>
+
+                <div class="acreencias respu_fact">
+                    <p>Prima de servicios (Artículo 306 CST)</p>
+                    <p>(SBL/2) x No. días periodo, año /180</p>
+                    <p id="prima_ser1" class="resp_p"></p>
+                    <p id="prima_ser2" class="resp_p"></p>
+                    <p id="prima_ser3" class="resp_p"></p>
+                </div>
+
+                <div class="acreencias respu_fact">
+                    <p>Vacaciones (Artículo 189 CST)</p>
+                    <p>(SBL-AT) x No de días periodo, año / 720</p>
+                    <p id="vacaciones1" class="resp_p"></p>
+                    <p id="vacaciones2" class="resp_p"></p>
+                    <p id="vacaciones3" class="resp_p"></p>
+                </div>
+
+                <div class="acreencias respu_fact">
+                    <p>Indemnización por despido sin Justa causa </p>
+                    <p>Artículo 64 CST</p>
+                    <input type="number" id="indep_des1" placeholder="Valor en pesos">
+                    <input type="number" id="indep_des2" placeholder="Valor en pesos">
+                    <input type="number" id="indep_des3" placeholder="Valor en pesos">
+                </div>
+
+                <div class="acreencias respu_fact">
+                    <p>Indemnización moratoria</p>
+                    <p>Artículo 65 CST</p>
+                    <p id="indep_mora1" class="resp_p"></p>
+                    <p id="indep_mora2" class="resp_p"></p>
+                    <p id="indep_mora3" class="resp_p"></p>
+                </div>
+
+                <div class="acreencias respu_fact">
+                    <p>Indemnización por no consignación de cesantías</p>
+                    <p>Artículo 99 Ley 50/90</p>
+                    <input type="number" id="indep_cesa1" placeholder="Valor en pesos">
+                    <input type="number" id="indep_cesa2" placeholder="Valor en pesos">
+                    <input type="number" id="indep_cesa3" placeholder="Valor en pesos">
+                </div>
+
+                <div class="acreencias total">
+                    <p>Total acreencias laborales:</p>
+                    <p id="total_acree1" class="resp_p"></p>
+                    <p id="total_acree2" class="resp_p"></p>
+                    <p id="total_acree3" class="resp_p"></p>
+                </div>
+            </div>
+
+            <div class="total_final">
+                <h3>Total:</h3>
+                <p id="total_no_va_mas" class="resp_p"></p>
+            </div>
+
+            <button id="sub" type="submit">CALCULAR</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Realizado por :)</p>
+    </footer>
+
+    <script src="./static/js/landing.js"></script>
+</body>
+</html>

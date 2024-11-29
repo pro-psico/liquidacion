@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=IBM+Plex+Sans:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anaheim", sans-serif;
+}
+body{
+    background-color: #f2f2f2;
+}
+header{
+    background-color: #f7776e;
+}
+header div{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+header div img{
+    height: 40px;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    margin: 20px;
+}
+.fecha_corte{
+    font-weight: bold;
+    font-size: 20px;
+}
+input{
+    all: unset;
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
+    border-bottom: 1px solid #f7776e;
+    color: black;
+    background-color: rgba(247, 119, 110, 0.05);
+}
+.resp_p{
+    min-height: 20px;
+    max-width: 155px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #f7776e;
+    color: black;
+    background-color: rgba(247, 119, 110, 0.05);
+}
+.datos_generales{
+    display: flex;
+    flex-direction: column;
+}
+.contain_jor div{
+    display: flex;
+    flex-direction: column;
+}
+h2, h3{
+    text-align: center;
+    margin: 10px 0;
+}
+.tiempo_p{
+    max-width: 100%;
+}
+
+.dias_count{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.dias_contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.factores{
+    display: flex;
+    flex-direction: column;
+}
+.factores_uno{
+    display: flex;
+    align-items: center;
+}
+.factores_uno label{
+    width: 300px;
+    padding: 10px;
+}
+.factores_uno input{
+    height: 20px;
+}
+.fact_total{
+    font-weight: bold;
+    font-size: 18px;
+}
+.respu_fact p{
+    width: 162px;
+}
+
+.adeudado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.adeudado h2{
+    max-width: 70%;
+}
+
+.acreencias{
+    display: flex;
+    align-items: center;
+}
+.acreencias p{
+    padding: 5px;
+    max-width: 155px;
+}
+.acreencias input{
+    height: 20px;
+}
+.total{
+    display: flex;
+    justify-content: end;
+    font-weight: bold;
+    font-size: 18px;
+}
+.total p{
+    min-width: 155px;
+}
+
+.total_final{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.total_final p{
+    margin: 0 10px;
+    padding: 0 5px;
+    min-width: 150px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    color: white;
+    background-color: #f7776e; 
+}
+
+button:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-2px); 
+}
+
+button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+footer{
+    background-color: #f7776e;
+}
